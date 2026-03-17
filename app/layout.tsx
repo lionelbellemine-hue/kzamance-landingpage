@@ -5,8 +5,9 @@ import './globals.css'
 
 const googleSans = Google_Sans({
   subsets: ['latin'],
-  variable: '--font-sans',
+  variable: '--font-google-sans',
   weight: ['400', '500', '700'],
+  adjustFontFallback: false,
 })
 
 export const metadata: Metadata = {

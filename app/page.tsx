@@ -107,7 +107,7 @@ function Header() {
           {/* Logo mark */}
           <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center flex-shrink-0" aria-hidden="true">
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-              <path d="M4 14V4l5 5 5-5v10" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M5 4v10M13 4l-6 5 6 5" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
           <span className="text-base font-semibold text-foreground tracking-tight">K-zamance</span>
@@ -434,27 +434,6 @@ function Footer() {
               </time>
             </p>
           </div>
-
-          {/* Links */}
-          <nav aria-label="Liens du pied de page">
-            <ul className="flex flex-wrap gap-x-6 gap-y-2" role="list">
-              {[
-                { label: "Contact", href: "#" },
-                { label: "Mentions légales", href: "#" },
-                { label: "Confidentialité", href: "#" },
-                { label: "CGU", href: "#" },
-              ].map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-xs text-muted-foreground hover:text-foreground transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 rounded"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
         </div>
 
         <div className="mt-8 pt-6 border-t border-border flex items-center justify-between gap-4 flex-wrap">
