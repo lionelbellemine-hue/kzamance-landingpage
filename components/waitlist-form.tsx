@@ -21,22 +21,39 @@ export function WaitlistForm({ compact = false }: WaitlistFormProps) {
     e.preventDefault()
     setErrorMsg("")
 
-    if (!isValidEmail(email)) {
+    const normalizedEmail = email.trim().toLowerCase()
+
+    if (!isValidEmail(normalizedEmail)) {
       setErrorMsg("Veuillez entrer une adresse email valide.")
       return
     }
 
     setState("loading")
 
-    // Simulated async submission — replace with real API call
-    await new Promise((resolve) => setTimeout(resolve, 1200))
+    try {
+      const response = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: normalizedEmail }),
+      })
 
-    // Simulated success (90% of the time for demo)
-    if (Math.random() > 0.05) {
+      const data = (await response.json().catch(() => null)) as { error?: string } | null
+
+      if (!response.ok) {
+        throw new Error(data?.error || "Une erreur est survenue. Veuillez réessayer.")
+      }
+
+      setEmail("")
       setState("success")
-    } else {
+    } catch (error) {
       setState("error")
-      setErrorMsg("Une erreur est survenue. Veuillez réessayer.")
+      setErrorMsg(
+        error instanceof Error
+          ? error.message
+          : "Une erreur est survenue. Veuillez réessayer."
+      )
     }
   }
 
