@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 
-// Configurable opening date — Europe/Paris timezone (UTC+2 on April 1st 2026)
+// Configurable opening date — Europe/Paris timezone (UTC+2 on May 4th 2026)
 const OPENING_DATE = new Date("2026-05-04T00:00:00+02:00")
 
 interface TimeLeft {

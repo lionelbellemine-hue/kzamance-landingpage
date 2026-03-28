@@ -11,7 +11,7 @@ const googleSans = Google_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'K-zamance — Ouverture le 1er avril 2026',
+  title: 'K-zamance — Ouverture le 4 mai 2026',
   description:
     "K-zamance est la plateforme qui relie les producteurs locaux et les consommateurs autour de produits frais, locaux et de saison. Moins d'intermédiaires, plus de transparence, plus de goût.",
   generator: 'v0.app',

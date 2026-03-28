@@ -71,7 +71,7 @@ export function WaitlistForm({ compact = false }: WaitlistFormProps) {
         </div>
         <p className="text-base font-semibold text-foreground">Vous êtes inscrit·e !</p>
         <p className="text-sm text-muted-foreground text-center max-w-xs">
-          Nous vous enverrons un email dès l&apos;ouverture du site le <strong>1er avril 2026</strong>.
+          Nous vous enverrons un email dès l&apos;ouverture du site le <strong>4 mai 2026</strong>.
         </p>
       </div>
     )

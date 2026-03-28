@@ -115,7 +115,7 @@ function Header() {
         <div className="flex items-center gap-2">
           <span className="hidden sm:inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground bg-muted border border-border rounded-full px-3 py-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-primary" aria-hidden="true" />
-            Ouverture le 1er avril 2026
+            Ouverture le 4 mai 2026
           </span>
           <a
             href="#inscription"
@@ -381,7 +381,7 @@ function WaitlistSection() {
             Soyez parmi les premiers informés
           </h2>
           <p className="mt-4 text-muted-foreground text-base leading-relaxed">
-            Le site ouvre le <strong className="text-foreground font-medium">1er avril 2026</strong>. Laissez votre email pour être averti dès l'ouverture et accéder en avant-première à la plateforme.
+            Le site ouvre le <strong className="text-foreground font-medium">4 mai 2026</strong>. Laissez votre email pour être averti dès l'ouverture et accéder en avant-première à la plateforme.
           </p>
         </div>
 
@@ -429,8 +429,8 @@ function Footer() {
             </p>
             <p className="text-xs text-muted-foreground mt-1">
               Ouverture le{" "}
-              <time dateTime="2026-04-01" className="font-medium text-foreground/70">
-                1er avril 2026
+              <time dateTime="2026-05-04" className="font-medium text-foreground/70">
+                4 mai 2026
               </time>
             </p>
           </div>
