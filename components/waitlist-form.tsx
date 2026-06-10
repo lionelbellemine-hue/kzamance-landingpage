@@ -50,9 +50,7 @@ export function WaitlistForm({ compact = false }: WaitlistFormProps) {
     } catch (error) {
       setState("error")
       setErrorMsg(
-        error instanceof Error
-          ? error.message
-          : "Une erreur est survenue. Veuillez réessayer."
+        error instanceof Error ? error.message : "Une erreur est survenue. Veuillez réessayer.",
       )
     }
   }
@@ -66,7 +64,15 @@ export function WaitlistForm({ compact = false }: WaitlistFormProps) {
       >
         <div className="w-11 h-11 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-            <path d="M4 10l4.5 4.5L16 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="text-primary" style={{ stroke: "var(--color-primary, oklch(0.42 0.12 145))" }} />
+            <path
+              d="M4 10l4.5 4.5L16 6"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="text-primary"
+              style={{ stroke: "var(--color-primary, oklch(0.42 0.12 145))" }}
+            />
           </svg>
         </div>
         <p className="text-base font-semibold text-foreground">Vous êtes inscrit·e !</p>
@@ -84,7 +90,13 @@ export function WaitlistForm({ compact = false }: WaitlistFormProps) {
       className={compact ? "w-full" : "flex flex-col items-center gap-4 w-full"}
       aria-label="Formulaire d'inscription à la liste d'attente"
     >
-      <div className={compact ? "flex flex-col sm:flex-row gap-2 w-full" : "flex flex-col sm:flex-row gap-2 w-full max-w-md"}>
+      <div
+        className={
+          compact
+            ? "flex flex-col sm:flex-row gap-2 w-full"
+            : "flex flex-col sm:flex-row gap-2 w-full max-w-md"
+        }
+      >
         <label htmlFor="waitlist-email" className="sr-only">
           Adresse email
         </label>
@@ -111,9 +123,25 @@ export function WaitlistForm({ compact = false }: WaitlistFormProps) {
         >
           {state === "loading" ? (
             <>
-              <svg className="animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+              <svg
+                className="animate-spin w-4 h-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                />
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                />
               </svg>
               Inscription...
             </>

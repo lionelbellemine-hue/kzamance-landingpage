@@ -41,10 +41,7 @@ export function Countdown({ onOpeningReached }: CountdownProps) {
     setMounted(true)
     const initial = getTimeLeft()
     const alreadyOpen =
-      initial.days === 0 &&
-      initial.hours === 0 &&
-      initial.minutes === 0 &&
-      initial.seconds === 0
+      initial.days === 0 && initial.hours === 0 && initial.minutes === 0 && initial.seconds === 0
 
     if (alreadyOpen) {
       setIsOpen(true)
@@ -92,7 +89,13 @@ export function Countdown({ onOpeningReached }: CountdownProps) {
         >
           Découvrir K-zamance
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path
+              d="M3 8h10M9 4l4 4-4 4"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
           </svg>
         </a>
       </div>

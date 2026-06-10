@@ -1,23 +1,23 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
   /* K-zamance brand palette: natural green, warm cream, beige, earthy accents */
-  --background: oklch(0.98 0.008 90);         /* warm off-white / cream */
-  --foreground: oklch(0.22 0.02 100);          /* deep warm brown-green */
-  --card: oklch(0.99 0.005 85);               /* near-white cream card */
+  --background: oklch(0.98 0.008 90); /* warm off-white / cream */
+  --foreground: oklch(0.22 0.02 100); /* deep warm brown-green */
+  --card: oklch(0.99 0.005 85); /* near-white cream card */
   --card-foreground: oklch(0.22 0.02 100);
   --popover: oklch(0.99 0.005 85);
   --popover-foreground: oklch(0.22 0.02 100);
-  --primary: oklch(0.42 0.12 145);            /* natural forest green */
+  --primary: oklch(0.42 0.12 145); /* natural forest green */
   --primary-foreground: oklch(0.99 0.005 85);
-  --secondary: oklch(0.88 0.04 90);           /* warm beige */
+  --secondary: oklch(0.88 0.04 90); /* warm beige */
   --secondary-foreground: oklch(0.28 0.04 100);
-  --muted: oklch(0.93 0.015 90);              /* soft sand */
+  --muted: oklch(0.93 0.015 90); /* soft sand */
   --muted-foreground: oklch(0.5 0.03 100);
-  --accent: oklch(0.72 0.1 80);              /* warm amber / harvest */
+  --accent: oklch(0.72 0.1 80); /* warm amber / harvest */
   --accent-foreground: oklch(0.22 0.02 100);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
@@ -71,7 +71,7 @@
   --chart-1: oklch(0.55 0.14 145);
   --chart-2: oklch(0.72 0.1 80);
   --chart-3: oklch(0.65 0.12 130);
-  --chart-4: oklch(0.70 0.09 95);
+  --chart-4: oklch(0.7 0.09 95);
   --chart-5: oklch(0.48 0.1 160);
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
@@ -85,7 +85,9 @@
 
 @theme inline {
   --font-sans: var(--font-google-sans);
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -131,4 +133,33 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* ── Thème « pro » : charte de l'application K-zamance (application/) ──────────
+   Appliqué uniquement aux landing pages /[segment] (wrapper .pro-theme), pour
+   ne pas toucher la page B2C. Reprend les tokens couleur + Poppins + le radius
+   de l'app. Comme les --radius-* (@theme inline) référencent var(--radius), les
+   surcharger ici suffit à reproduire les arrondis de l'app. */
+.pro-theme {
+  --radius: 0.65rem;
+  --background: oklch(0.99 0.003 145);
+  --foreground: oklch(0.18 0.02 145);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.02 145);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.02 145);
+  --primary: oklch(60.75% 0.177 144.323);
+  --primary-foreground: oklch(0.98 0.016 145);
+  --secondary: oklch(0.94 0.03 145);
+  --secondary-foreground: oklch(0.25 0.05 145);
+  --muted: oklch(0.95 0.015 145);
+  --muted-foreground: oklch(0.45 0.03 145);
+  --accent: oklch(0.92 0.04 145);
+  --accent-foreground: oklch(0.25 0.05 145);
+  --destructive: oklch(0.6 0.25 25);
+  --destructive-foreground: oklch(0.98 0.02 95);
+  --border: oklch(0.9 0.02 145);
+  --input: oklch(0.9 0.02 145);
+  --ring: oklch(60.75% 0.177 144.323);
+  font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
 }

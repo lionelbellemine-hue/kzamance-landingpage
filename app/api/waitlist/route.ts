@@ -12,10 +12,7 @@ export async function POST(request: Request) {
   const config = getBrevoConfig()
 
   if (!config) {
-    return Response.json(
-      { error: "Configuration Brevo incomplète côté serveur." },
-      { status: 500 }
-    )
+    return Response.json({ error: "Configuration Brevo incomplète côté serveur." }, { status: 500 })
   }
 
   let payload: unknown
@@ -23,19 +20,13 @@ export async function POST(request: Request) {
   try {
     payload = await request.json()
   } catch {
-    return Response.json(
-      { error: "Requête invalide." },
-      { status: 400 }
-    )
+    return Response.json({ error: "Requête invalide." }, { status: 400 })
   }
 
   const result = waitlistSchema.safeParse(payload)
 
   if (!result.success) {
-    return Response.json(
-      { error: "Veuillez fournir une adresse email valide." },
-      { status: 400 }
-    )
+    return Response.json({ error: "Veuillez fournir une adresse email valide." }, { status: 400 })
   }
 
   try {
@@ -70,7 +61,7 @@ export async function POST(request: Request) {
             error:
               "Brevo bloque actuellement cette requête car l'IP du serveur n'est pas autorisée dans ton compte.",
           },
-          { status: 503 }
+          { status: 503 },
         )
       }
     } else {
@@ -79,7 +70,7 @@ export async function POST(request: Request) {
 
     return Response.json(
       { error: "Impossible de finaliser l'inscription pour le moment." },
-      { status: 502 }
+      { status: 502 },
     )
   }
 }

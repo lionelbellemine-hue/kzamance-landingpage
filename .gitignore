@@ -17,3 +17,7 @@ node_modules/
 .next/
 *.tsbuildinfo
 .DS_Store
+
+# Cloudflare / OpenNext
+.open-next/
+.wrangler/

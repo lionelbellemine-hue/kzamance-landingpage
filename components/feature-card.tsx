@@ -12,7 +12,7 @@ export function FeatureCard({ icon, title, description, className }: FeatureCard
     <article
       className={cn(
         "group flex flex-col gap-4 bg-card rounded-2xl border border-border p-6 transition-all duration-300 hover:shadow-md hover:-translate-y-0.5",
-        className
+        className,
       )}
     >
       <div className="w-11 h-11 rounded-xl bg-primary/10 border border-primary/15 flex items-center justify-center text-primary flex-shrink-0 transition-colors duration-200 group-hover:bg-primary/15">
@@ -41,15 +41,15 @@ export function AudienceCard({ audience, icon, title, subtitle, points }: Audien
     <article
       className={cn(
         "flex flex-col gap-5 rounded-3xl p-7 md:p-8 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5",
-        isConsumer
-          ? "bg-primary/5 border-primary/20"
-          : "bg-accent/10 border-accent/25"
+        isConsumer ? "bg-primary/5 border-primary/20" : "bg-accent/10 border-accent/25",
       )}
     >
-      <div className={cn(
-        "w-12 h-12 rounded-2xl flex items-center justify-center",
-        isConsumer ? "bg-primary/15 text-primary" : "bg-accent/25 text-foreground"
-      )}>
+      <div
+        className={cn(
+          "w-12 h-12 rounded-2xl flex items-center justify-center",
+          isConsumer ? "bg-primary/15 text-primary" : "bg-accent/25 text-foreground",
+        )}
+      >
         {icon}
       </div>
       <div>
@@ -58,11 +58,14 @@ export function AudienceCard({ audience, icon, title, subtitle, points }: Audien
       </div>
       <ul className="flex flex-col gap-2.5" role="list">
         {points.map((point) => (
-          <li key={point} className="flex items-start gap-2.5 text-sm text-foreground/80 leading-relaxed">
+          <li
+            key={point}
+            className="flex items-start gap-2.5 text-sm text-foreground/80 leading-relaxed"
+          >
             <span
               className={cn(
                 "mt-1 w-1.5 h-1.5 rounded-full flex-shrink-0",
-                isConsumer ? "bg-primary" : "bg-accent"
+                isConsumer ? "bg-primary" : "bg-accent",
               )}
               aria-hidden="true"
             />
