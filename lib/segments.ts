@@ -61,7 +61,7 @@ const SEGMENTS: Record<string, Segment> = {
     title: "Et si vos pots de miel se vendaient",
     titleAccent: "autrement ?",
     subtitle:
-      "K-zamance vous met en relation directe avec les habitants et les commerces de votre coin du Gard. Vous fixez vos prix, on s'occupe de trouver les clients.",
+      "K-zamance vous met en relation directe avec des acheteurs - particuliers comme commerces - de votre région et de toute la France. Vous fixez vos prix, on s'occupe de vous trouver des clients.",
     heroBullets: [
       "Vous fixez vos prix, vous gardez la marge",
       "Des clients près de chez vous, pas des grossistes",
@@ -128,7 +128,7 @@ const SEGMENTS: Record<string, Segment> = {
     title: "Et si vos produits se vendaient",
     titleAccent: "autrement ?",
     subtitle:
-      "K-zamance vous met en relation directe avec les habitants et les commerces de votre région. Vous fixez vos prix, on s'occupe de trouver les clients.",
+      "K-zamance vous met en relation directe avec des acheteurs - particuliers comme commerces - de votre région et de toute la France. Vous fixez vos prix, on s'occupe de vous trouver des clients.",
     heroBullets: [
       "Vous fixez vos prix, vous gardez la marge",
       "Des clients locaux, pas des intermédiaires",
