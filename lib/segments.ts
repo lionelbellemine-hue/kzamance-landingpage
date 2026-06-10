@@ -64,7 +64,7 @@ const SEGMENTS: Record<string, Segment> = {
       "K-zamance vous met en relation directe avec des acheteurs - particuliers comme commerces - de votre région et de toute la France. Vous fixez vos prix, on s'occupe de vous trouver des clients.",
     heroBullets: [
       "Vous fixez vos prix, vous gardez la marge",
-      "Des clients près de chez vous, pas des grossistes",
+      "Des clients qui achètent en direct, pas des grossistes",
       "Aucun temps en plus : on gère la vente et les commandes",
     ],
     benefits: [
