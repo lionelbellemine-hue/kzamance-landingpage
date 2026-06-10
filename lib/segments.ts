@@ -84,7 +84,7 @@ const SEGMENTS: Record<string, Segment> = {
           "La fiche, les photos, les commandes, la mise en relation : c'est notre travail. Vous, vous restez avec vos abeilles.",
       },
     ],
-    showcaseTitle: "Vous savez faire le miel, on sait le vendre !",
+    showcaseTitle: "Vous savez récolter le miel, on sait le vendre !",
     showcaseText:
       "K-zamance vous trouve des clients réguliers près de chez vous et gère les commandes en ligne. Vous préparez et vous expédiez, votre miel part sans que vous ayez à courir après.",
     steps: [
